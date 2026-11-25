@@ -1,0 +1,5 @@
+# Public repo: publish ONLY the SEPRU official site in docs/.
+# Everything else (audio, jackets originals, video, scripts, tracks) stays local.
+/*
+!/.gitignore
+!/docs/

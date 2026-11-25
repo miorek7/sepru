@@ -1,0 +1,84 @@
+{
+  "artist": "SEPRU",
+  "concept": "言葉にできない温度や、ふたりだけの記憶を音にする音楽プロジェクト",
+  "links": {
+    "youtube_channel": "https://www.youtube.com/@sepru_music",
+    "spotify_artist": "https://open.spotify.com/artist/25rbBvIPynONe2I7EQmgNX",
+    "youtube_music_artist": "https://music.youtube.com/channel/UCvkEkl2NMO0g1gUzqKqDE0w",
+    "apple_music_artist": null
+  },
+  "featured": "06",
+  "_note": "URL が null のボタンは自動で無効化され、全ストア null の曲には COMING SOON が付きます。配信が始まったら該当の null を正規 URL に書き換えるだけで反映されます。",
+  "tracks": [
+    {
+      "no": "01", "title_jp": "Slow Smoke", "title_en": "煙に溺れる",
+      "jacket": "assets/jackets/01.jpg",
+      "links": {
+        "spotify": "https://open.spotify.com/track/623P3zE25x3pb6wkubZPJ5",
+        "apple_music": null,
+        "youtube_music": "https://music.youtube.com/watch?v=Vorg9zjjvNg",
+        "youtube_mv": "https://youtube.com/shorts/8mmht9y6jB0"
+      }
+    },
+    {
+      "no": "02", "title_jp": "肺の奥の温度", "title_en": "37.2°C DEEP IN THE LUNGS",
+      "jacket": "assets/jackets/02.jpg",
+      "links": {
+        "spotify": "https://open.spotify.com/track/5Kexg65gh6FM3ABHSrMyrm",
+        "apple_music": null,
+        "youtube_music": "https://music.youtube.com/watch?v=tso7PrX5aos",
+        "youtube_mv": "https://youtube.com/shorts/nIFH-6CIv34"
+      }
+    },
+    {
+      "no": "03", "title_jp": "鏡の中の右側", "title_en": "RIGHT SIDE OF THE MIRROR",
+      "jacket": "assets/jackets/03.jpg",
+      "links": {
+        "spotify": "https://open.spotify.com/track/1VNI7n2TrwXBjoI7ApRjYR",
+        "apple_music": null,
+        "youtube_music": "https://music.youtube.com/watch?v=ZgSkvfPsdU0",
+        "youtube_mv": "https://youtube.com/shorts/vHJZlhOaHWE"
+      }
+    },
+    {
+      "no": "04", "title_jp": "引火点の目録", "title_en": "FLASHPOINT CATALOG",
+      "jacket": "assets/jackets/04.jpg",
+      "links": {
+        "spotify": "https://open.spotify.com/track/0uZ7QcQzp04C5nOtihJdHI",
+        "apple_music": null,
+        "youtube_music": "https://music.youtube.com/watch?v=bQYybDpp_58",
+        "youtube_mv": "https://youtube.com/shorts/HPX-ZZyzcxI"
+      }
+    },
+    {
+      "no": "05", "title_jp": "指切りの満期", "title_en": "MATURITY OF THE PINKY SWEAR",
+      "jacket": "assets/jackets/05.jpg",
+      "links": {
+        "spotify": "https://open.spotify.com/track/1doWuvUFXtGZjMlgqzBTWm",
+        "apple_music": null,
+        "youtube_music": "https://music.youtube.com/watch?v=ss7MS1ujn9o",
+        "youtube_mv": "https://youtube.com/shorts/fJIVO7UsQpE"
+      }
+    },
+    {
+      "no": "06", "title_jp": "無垢な標本", "title_en": "IMMACULATE SPECIMEN",
+      "jacket": "assets/jackets/06.jpg",
+      "links": {
+        "spotify": "https://open.spotify.com/track/6QjcTTPDpq1f5Bv3LO7SKm",
+        "apple_music": null,
+        "youtube_music": "https://music.youtube.com/watch?v=-Q-c24NZ2go",
+        "youtube_mv": null
+      }
+    },
+    {
+      "no": "07", "title_jp": "傾かない天秤", "title_en": "THE UNTILTING SCALE",
+      "jacket": "assets/jackets/07.jpg",
+      "links": {"spotify": null, "apple_music": null, "youtube_music": null, "youtube_mv": null}
+    },
+    {
+      "no": "08", "title_jp": "絶滅", "title_en": "EXTINCT",
+      "jacket": null,
+      "links": {"spotify": null, "apple_music": null, "youtube_music": null, "youtube_mv": null}
+    }
+  ]
+}

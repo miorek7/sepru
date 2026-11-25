@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEPRU — Discography</title>
+<meta name="description" content="SEPRU 公式ディスコグラフィ。言葉にできない温度や、ふたりだけの記憶を音にする音楽プロジェクト。">
+<meta property="og:title" content="SEPRU — Discography">
+<meta property="og:description" content="言葉にできない温度や、ふたりだけの記憶を音にする音楽プロジェクト">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B0C0E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B0C0E; --panel:#111215; --ink:#F2F2EE; --mut:#8C8C88; --dim:#55554F;
+  --line:rgba(242,242,238,.14); --hair:rgba(242,242,238,.08);
+  --serif:"Noto Serif JP","Yu Mincho","YuMincho","Hiragino Mincho ProN",serif;
+  --sans:"Helvetica Neue",Arial,"Hiragino Sans","Yu Gothic",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-weight:400;line-height:1.8;
+  -webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* header */
+header{padding-top:72px;padding-bottom:48px;text-align:center}
+.name{font-weight:300;font-size:clamp(44px,12vw,84px);letter-spacing:.32em;margin:0 0 0 .32em;line-height:1.1}
+.concept{margin:22px auto 30px;max-width:30em;color:#CFCFCA;font-size:15px;letter-spacing:.08em}
+.hlinks{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:8px 16px;
+  border:1px solid var(--line);border-radius:2px;background:transparent;color:var(--ink);text-decoration:none;
+  font:500 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;transition:border-color .2s,background .2s}
+.btn:hover{border-color:rgba(242,242,238,.55);background:rgba(242,242,238,.04)}
+.btn.solid{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.solid:hover{background:#fff}
+.btn[aria-disabled="true"]{color:var(--dim);border-color:var(--hair);pointer-events:none;cursor:default}
+.btn svg{width:14px;height:14px;flex:none}
+
+.label{font:500 11px/1 var(--sans);letter-spacing:.28em;color:var(--mut);text-transform:uppercase}
+.badge{display:inline-block;padding:5px 8px;border:1px solid var(--line);font:500 10px/1 var(--sans);
+  letter-spacing:.22em;color:var(--mut)}
+
+/* featured */
+.featured{padding-top:56px;padding-bottom:56px}
+.feat{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;margin-top:24px}
+.feat img,.feat .ph{width:100%;height:auto;aspect-ratio:1;object-fit:cover;display:block;border:1px solid var(--hair);
+  box-shadow:0 18px 60px rgba(0,0,0,.55)}
+.feat .no{font:500 12px/1 var(--sans);letter-spacing:.24em;color:var(--mut)}
+.feat h2{font-weight:400;font-size:clamp(30px,7vw,44px);letter-spacing:.12em;margin:12px 0 6px;line-height:1.35}
+.feat .en{font:500 12px/1.6 var(--sans);letter-spacing:.2em;color:var(--mut);margin-bottom:26px}
+@media (min-width:760px){.feat{grid-template-columns:1.05fr 1fr;gap:48px}}
+
+/* discography */
+.disco{padding-top:56px;padding-bottom:24px}
+.grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--hair);border:1px solid var(--hair);margin-top:24px}
+@media (min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--bg);padding:20px;display:grid;grid-template-columns:112px 1fr;gap:18px;align-items:start}
+.card img,.card .ph{width:112px;height:auto;aspect-ratio:1;object-fit:cover;display:block;border:1px solid var(--hair)}
+.card .no{font:500 11px/1 var(--sans);letter-spacing:.2em;color:var(--mut);display:flex;flex-wrap:wrap;gap:8px;align-items:center;white-space:nowrap}
+.card h3{font-weight:400;font-size:21px;letter-spacing:.1em;margin:8px 0 2px;line-height:1.45}
+.card .en{font:500 10.5px/1.6 var(--sans);letter-spacing:.18em;color:var(--mut);margin-bottom:14px}
+.fstores{display:grid;grid-template-columns:1fr 1fr;gap:8px}.fstores .btn{padding:8px 8px;font-size:11px;letter-spacing:.08em}
+.card .stores{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.card .stores .btn{min-height:38px;padding:8px 10px;font-size:11px;letter-spacing:.1em}
+.ph{display:flex !important;align-items:center;justify-content:center;background:
+  linear-gradient(160deg,#17181b,#0d0e10);color:var(--dim);font-size:13px;letter-spacing:.3em}
+.card.soon h3,.card.soon .en{color:var(--mut)}
+
+footer{padding-top:40px;padding-bottom:56px;text-align:center;color:var(--dim);font:500 11px/1.8 var(--sans);letter-spacing:.2em}
+.err{color:var(--mut);text-align:center;padding:40px 0;font-size:14px}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <h1 class="name">SEPRU</h1>
+  <p class="concept" id="concept">言葉にできない温度や、ふたりだけの記憶を音にする音楽プロジェクト</p>
+  <div class="hlinks" id="hlinks"></div>
+</header>
+<hr class="rule">
+<section class="wrap featured" id="featured" aria-labelledby="ft"></section>
+<hr class="rule">
+<section class="wrap disco" aria-labelledby="dt">
+  <div class="label" id="dt">Discography</div>
+  <div class="grid" id="grid"></div>
+</section>
+<footer class="wrap">© SEPRU</footer>
+
+<script>
+// Track data lives in tracks.json: replace a null link with the store URL to enable its button.
+const STORES = [
+  ["spotify", "Spotify", '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5a10.5 10.5 0 1 0 0 21 10.5 10.5 0 0 0 0-21Zm4.8 15.1a.65.65 0 0 1-.9.22c-2.47-1.5-5.57-1.85-9.23-1.01a.65.65 0 1 1-.29-1.27c4-.92 7.43-.52 10.2 1.17.31.19.4.59.22.89Zm1.29-2.86a.82.82 0 0 1-1.12.27c-2.82-1.74-7.13-2.24-10.47-1.23a.82.82 0 1 1-.47-1.56c3.81-1.16 8.55-.6 11.8 1.4.38.23.5.74.26 1.12Zm.11-2.98C14.82 8.75 9.24 8.56 6.02 9.54a.98.98 0 1 1-.57-1.88c3.7-1.12 9.86-.9 13.74 1.4a.98.98 0 0 1-1 1.69Z"/></svg>'],
+  ["apple_music", "Apple Music", '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3.2v11.9a3.1 3.1 0 1 1-2-2.9V7.6l-8 1.9v7.6a3.1 3.1 0 1 1-2-2.9V5.4l12-2.2Z"/></svg>'],
+  ["youtube_music", "YouTube Music", '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="12" r="5.2"/><path d="M10.6 9.6v4.8l4-2.4-4-2.4Z" fill="currentColor" stroke="none"/></svg>'],
+  ["youtube_mv", "YouTube MV", '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.1a3 3 0 0 0-2.1-2.1C18 5.5 12 5.5 12 5.5s-6 0-7.9.5A3 3 0 0 0 2 8.1 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.9a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.3.4-2.6.4-3.9s-.1-2.6-.4-3.9ZM10 15V9l5.2 3L10 15Z"/></svg>'],
+];
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const live = t => STORES.some(([k]) => t.links && t.links[k]);
+const btn = (url, label, icon, solid) => url
+  ? `<a class="btn${solid ? " solid" : ""}" href="${esc(url)}" target="_blank" rel="noopener">${icon}${label}</a>`
+  : `<span class="btn" aria-disabled="true" title="準備中">${icon}${label}</span>`;
+const art = (t, cls = "") => t.jacket
+  ? `<img src="${esc(t.jacket)}" alt="${esc(t.title_jp)} ジャケット" loading="lazy" width="720" height="720"${cls}>`
+  : `<div class="ph" role="img" aria-label="${esc(t.title_jp)}">${esc(t.no)}</div>`;
+
+function render(d) {
+  document.getElementById("concept").textContent = d.concept || "";
+  const L = d.links || {};
+  document.getElementById("hlinks").innerHTML =
+    (L.youtube_channel ? btn(L.youtube_channel, "YouTube Channel", STORES[3][2], true) : "") +
+    (L.spotify_artist ? btn(L.spotify_artist, "Spotify", STORES[0][2]) : "") +
+    (L.youtube_music_artist ? btn(L.youtube_music_artist, "YouTube Music", STORES[2][2]) : "") +
+    (L.apple_music_artist ? btn(L.apple_music_artist, "Apple Music", STORES[1][2]) : "");
+
+  const tracks = d.tracks || [];
+  const released = tracks.filter(live);
+  const f = tracks.find(t => t.no === d.featured && live(t)) || released[released.length - 1];
+  document.getElementById("featured").innerHTML = f ? `
+    <div class="label" id="ft">Latest Release</div>
+    <div class="feat">
+      ${art(f)}
+      <div>
+        <div class="no">TRACK ${esc(f.no)}</div>
+        <h2>${esc(f.title_jp)}</h2>
+        <div class="en">${esc(f.title_en)}</div>
+        <div class="stores fstores">
+          ${STORES.map(([k, n, i], j) => btn(f.links[k], n, i, j === 0)).join("")}
+        </div>
+      </div>
+    </div>` : "";
+
+  document.getElementById("grid").innerHTML = tracks.map(t => `
+    <article class="card${live(t) ? "" : " soon"}">
+      ${art(t)}
+      <div>
+        <div class="no">TRACK ${esc(t.no)}${live(t) ? "" : `<span class="badge">COMING SOON</span>`}</div>
+        <h3>${esc(t.title_jp)}</h3>
+        <div class="en">${esc(t.title_en)}</div>
+      </div>
+      <div class="stores">${STORES.map(([k, n, i]) => btn(t.links && t.links[k], n, i)).join("")}</div>
+    </article>`).join("");
+}
+
+fetch("tracks.json", {cache: "no-cache"})
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(render)
+  .catch(() => { document.getElementById("grid").outerHTML =
+    '<p class="err">楽曲データ（tracks.json）を読み込めませんでした。</p>'; });
+</script>
+</body>
+</html>
