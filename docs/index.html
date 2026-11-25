@@ -30,7 +30,8 @@ a{color:inherit}
 /* header */
 header{padding-top:72px;padding-bottom:48px;text-align:center}
 .name{font-weight:300;font-size:clamp(44px,12vw,84px);letter-spacing:.32em;margin:0 0 0 .32em;line-height:1.1}
-.concept{margin:22px auto 30px;max-width:30em;color:#CFCFCA;font-size:15px;letter-spacing:.08em}
+.concept{margin:22px auto 30px;max-width:34em;color:#CFCFCA;font-size:clamp(13px,3.7vw,15px);letter-spacing:.06em}
+.concept .ph1{display:inline-block}
 .hlinks{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 
 /* buttons */
@@ -38,9 +39,18 @@ header{padding-top:72px;padding-bottom:48px;text-align:center}
   border:1px solid var(--line);border-radius:2px;background:transparent;color:var(--ink);text-decoration:none;
   font:500 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;transition:border-color .2s,background .2s}
 .btn:hover{border-color:rgba(242,242,238,.55);background:rgba(242,242,238,.04)}
-.btn.solid{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.btn.solid:hover{background:#fff}
-.btn[aria-disabled="true"]{color:var(--dim);border-color:var(--hair);pointer-events:none;cursor:default}
+/* store colours: Spotify green / YouTube Music red / YouTube (MV, channel) white + red mark */
+.b-spotify{background:#1DB954;border-color:#1DB954;color:#000;font-weight:700}
+.b-youtube_music{background:#E0002B;border-color:#E0002B;color:#fff;font-weight:700}
+.b-youtube_mv{background:#fff;border-color:#fff;color:#0F0F0F;font-weight:700}
+.b-youtube_mv svg{color:#FF0000}
+.b-spotify:hover,.b-youtube_music:hover,.b-youtube_mv:hover{filter:brightness(1.1)}
+.b-spotify:hover{background:#1DB954;border-color:#1DB954}
+.b-youtube_music:hover{background:#E0002B;border-color:#E0002B}
+.b-youtube_mv:hover{background:#fff;border-color:#fff}
+.btn[aria-disabled="true"]{background:transparent;color:var(--dim);border-color:var(--hair);font-weight:500;
+  filter:none;pointer-events:none;cursor:default}
+.btn[aria-disabled="true"] svg{color:inherit}
 .btn svg{width:14px;height:14px;flex:none}
 
 .label{font:500 11px/1 var(--sans);letter-spacing:.28em;color:var(--mut);text-transform:uppercase}
@@ -68,6 +78,7 @@ header{padding-top:72px;padding-bottom:48px;text-align:center}
 .card .en{font:500 10.5px/1.6 var(--sans);letter-spacing:.18em;color:var(--mut);margin-bottom:14px}
 .fstores{display:grid;grid-template-columns:1fr 1fr;gap:8px}.fstores .btn{padding:8px 8px;font-size:11px;letter-spacing:.08em}
 .card .stores{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.stores .btn:last-child:nth-child(odd){grid-column:1/-1}
 .card .stores .btn{min-height:38px;padding:8px 10px;font-size:11px;letter-spacing:.1em}
 .ph{display:flex !important;align-items:center;justify-content:center;background:
   linear-gradient(160deg,#17181b,#0d0e10);color:var(--dim);font-size:13px;letter-spacing:.3em}
@@ -80,7 +91,7 @@ footer{padding-top:40px;padding-bottom:56px;text-align:center;color:var(--dim);f
 <body>
 <header class="wrap">
   <h1 class="name">SEPRU</h1>
-  <p class="concept" id="concept">言葉にできない温度や、ふたりだけの記憶を音にする音楽プロジェクト</p>
+  <p class="concept" id="concept"><span class="ph1">言葉にできない温度や、</span><span class="ph1">ふたりだけの記憶を音にする音楽プロジェクト</span></p>
   <div class="hlinks" id="hlinks"></div>
 </header>
 <hr class="rule">
@@ -96,27 +107,27 @@ footer{padding-top:40px;padding-bottom:56px;text-align:center;color:var(--dim);f
 // Track data lives in tracks.json: replace a null link with the store URL to enable its button.
 const STORES = [
   ["spotify", "Spotify", '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5a10.5 10.5 0 1 0 0 21 10.5 10.5 0 0 0 0-21Zm4.8 15.1a.65.65 0 0 1-.9.22c-2.47-1.5-5.57-1.85-9.23-1.01a.65.65 0 1 1-.29-1.27c4-.92 7.43-.52 10.2 1.17.31.19.4.59.22.89Zm1.29-2.86a.82.82 0 0 1-1.12.27c-2.82-1.74-7.13-2.24-10.47-1.23a.82.82 0 1 1-.47-1.56c3.81-1.16 8.55-.6 11.8 1.4.38.23.5.74.26 1.12Zm.11-2.98C14.82 8.75 9.24 8.56 6.02 9.54a.98.98 0 1 1-.57-1.88c3.7-1.12 9.86-.9 13.74 1.4a.98.98 0 0 1-1 1.69Z"/></svg>'],
-  ["apple_music", "Apple Music", '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3.2v11.9a3.1 3.1 0 1 1-2-2.9V7.6l-8 1.9v7.6a3.1 3.1 0 1 1-2-2.9V5.4l12-2.2Z"/></svg>'],
   ["youtube_music", "YouTube Music", '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"/><circle cx="12" cy="12" r="5.2"/><path d="M10.6 9.6v4.8l4-2.4-4-2.4Z" fill="currentColor" stroke="none"/></svg>'],
   ["youtube_mv", "YouTube MV", '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.1a3 3 0 0 0-2.1-2.1C18 5.5 12 5.5 12 5.5s-6 0-7.9.5A3 3 0 0 0 2 8.1 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.9a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.3.4-2.6.4-3.9s-.1-2.6-.4-3.9ZM10 15V9l5.2 3L10 15Z"/></svg>'],
 ];
+const ICON = Object.fromEntries(STORES.map(([k, , i]) => [k, i]));
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const live = t => STORES.some(([k]) => t.links && t.links[k]);
-const btn = (url, label, icon, solid) => url
-  ? `<a class="btn${solid ? " solid" : ""}" href="${esc(url)}" target="_blank" rel="noopener">${icon}${label}</a>`
+const btn = (url, label, icon, key) => url
+  ? `<a class="btn b-${key}" href="${esc(url)}" target="_blank" rel="noopener">${icon}${label}</a>`
   : `<span class="btn" aria-disabled="true" title="準備中">${icon}${label}</span>`;
 const art = (t, cls = "") => t.jacket
   ? `<img src="${esc(t.jacket)}" alt="${esc(t.title_jp)} ジャケット" loading="lazy" width="720" height="720"${cls}>`
   : `<div class="ph" role="img" aria-label="${esc(t.title_jp)}">${esc(t.no)}</div>`;
 
 function render(d) {
-  document.getElementById("concept").textContent = d.concept || "";
+  document.getElementById("concept").innerHTML = (d.concept || "").split(/(?<=、)/)
+    .map(x => `<span class="ph1">${esc(x)}</span>`).join("");
   const L = d.links || {};
   document.getElementById("hlinks").innerHTML =
-    (L.youtube_channel ? btn(L.youtube_channel, "YouTube Channel", STORES[3][2], true) : "") +
-    (L.spotify_artist ? btn(L.spotify_artist, "Spotify", STORES[0][2]) : "") +
-    (L.youtube_music_artist ? btn(L.youtube_music_artist, "YouTube Music", STORES[2][2]) : "") +
-    (L.apple_music_artist ? btn(L.apple_music_artist, "Apple Music", STORES[1][2]) : "");
+    (L.youtube_channel ? btn(L.youtube_channel, "YouTube Channel", ICON.youtube_mv, "youtube_mv") : "") +
+    (L.spotify_artist ? btn(L.spotify_artist, "Spotify", ICON.spotify, "spotify") : "") +
+    (L.youtube_music_artist ? btn(L.youtube_music_artist, "YouTube Music", ICON.youtube_music, "youtube_music") : "");
 
   const tracks = d.tracks || [];
   const released = tracks.filter(live);
@@ -130,7 +141,7 @@ function render(d) {
         <h2>${esc(f.title_jp)}</h2>
         <div class="en">${esc(f.title_en)}</div>
         <div class="stores fstores">
-          ${STORES.map(([k, n, i], j) => btn(f.links[k], n, i, j === 0)).join("")}
+          ${STORES.map(([k, n, i]) => btn(f.links[k], n, i, k)).join("")}
         </div>
       </div>
     </div>` : "";
@@ -143,7 +154,7 @@ function render(d) {
         <h3>${esc(t.title_jp)}</h3>
         <div class="en">${esc(t.title_en)}</div>
       </div>
-      <div class="stores">${STORES.map(([k, n, i]) => btn(t.links && t.links[k], n, i)).join("")}</div>
+      <div class="stores">${STORES.map(([k, n, i]) => btn(t.links && t.links[k], n, i, k)).join("")}</div>
     </article>`).join("");
 }
 

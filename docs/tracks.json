@@ -4,8 +4,7 @@
   "links": {
     "youtube_channel": "https://www.youtube.com/@sepru_music",
     "spotify_artist": "https://open.spotify.com/artist/25rbBvIPynONe2I7EQmgNX",
-    "youtube_music_artist": "https://music.youtube.com/channel/UCvkEkl2NMO0g1gUzqKqDE0w",
-    "apple_music_artist": null
+    "youtube_music_artist": "https://music.youtube.com/channel/UCvkEkl2NMO0g1gUzqKqDE0w"
   },
   "featured": "06",
   "_note": "URL が null のボタンは自動で無効化され、全ストア null の曲には COMING SOON が付きます。配信が始まったら該当の null を正規 URL に書き換えるだけで反映されます。",
@@ -15,7 +14,6 @@
       "jacket": "assets/jackets/01.jpg",
       "links": {
         "spotify": "https://open.spotify.com/track/623P3zE25x3pb6wkubZPJ5",
-        "apple_music": null,
         "youtube_music": "https://music.youtube.com/watch?v=Vorg9zjjvNg",
         "youtube_mv": "https://youtube.com/shorts/8mmht9y6jB0"
       }
@@ -25,7 +23,6 @@
       "jacket": "assets/jackets/02.jpg",
       "links": {
         "spotify": "https://open.spotify.com/track/5Kexg65gh6FM3ABHSrMyrm",
-        "apple_music": null,
         "youtube_music": "https://music.youtube.com/watch?v=tso7PrX5aos",
         "youtube_mv": "https://youtube.com/shorts/nIFH-6CIv34"
       }
@@ -35,7 +32,6 @@
       "jacket": "assets/jackets/03.jpg",
       "links": {
         "spotify": "https://open.spotify.com/track/1VNI7n2TrwXBjoI7ApRjYR",
-        "apple_music": null,
         "youtube_music": "https://music.youtube.com/watch?v=ZgSkvfPsdU0",
         "youtube_mv": "https://youtube.com/shorts/vHJZlhOaHWE"
       }
@@ -45,7 +41,6 @@
       "jacket": "assets/jackets/04.jpg",
       "links": {
         "spotify": "https://open.spotify.com/track/0uZ7QcQzp04C5nOtihJdHI",
-        "apple_music": null,
         "youtube_music": "https://music.youtube.com/watch?v=bQYybDpp_58",
         "youtube_mv": "https://youtube.com/shorts/HPX-ZZyzcxI"
       }
@@ -55,7 +50,6 @@
       "jacket": "assets/jackets/05.jpg",
       "links": {
         "spotify": "https://open.spotify.com/track/1doWuvUFXtGZjMlgqzBTWm",
-        "apple_music": null,
         "youtube_music": "https://music.youtube.com/watch?v=ss7MS1ujn9o",
         "youtube_mv": "https://youtube.com/shorts/fJIVO7UsQpE"
       }
@@ -65,7 +59,6 @@
       "jacket": "assets/jackets/06.jpg",
       "links": {
         "spotify": "https://open.spotify.com/track/6QjcTTPDpq1f5Bv3LO7SKm",
-        "apple_music": null,
         "youtube_music": "https://music.youtube.com/watch?v=-Q-c24NZ2go",
         "youtube_mv": null
       }
@@ -73,7 +66,7 @@
     {
       "no": "07", "title_jp": "傾かない天秤", "title_en": "THE UNTILTING SCALE",
       "jacket": "assets/jackets/07.jpg",
-      "links": {"spotify": null, "apple_music": null, "youtube_music": null, "youtube_mv": null}
+      "links": {"spotify": null, "youtube_music": null, "youtube_mv": null}
     }
   ]
 }
