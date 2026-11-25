@@ -6,7 +6,7 @@
     "spotify_artist": "https://open.spotify.com/artist/25rbBvIPynONe2I7EQmgNX",
     "youtube_music_artist": "https://music.youtube.com/channel/UCvkEkl2NMO0g1gUzqKqDE0w"
   },
-  "featured": "06",
+  "featured": "07",
   "_note": "URL が null のボタンは自動で無効化され、全ストア null の曲には COMING SOON が付きます。配信が始まったら該当の null を正規 URL に書き換えるだけで反映されます。",
   "tracks": [
     {
@@ -66,7 +66,7 @@
     {
       "no": "07", "title_jp": "傾かない天秤", "title_en": "THE UNTILTING SCALE",
       "jacket": "assets/jackets/07.jpg",
-      "links": {"spotify": null, "youtube_music": null, "youtube_mv": "https://youtube.com/shorts/QkyUVlZarPE"}
+      "links": {"spotify": "https://open.spotify.com/track/6bP9hgrtwDHdJsnD9dgH72", "youtube_music": "https://music.youtube.com/watch?v=DJtrOxns4TY", "youtube_mv": "https://youtube.com/shorts/QkyUVlZarPE"}
     }
   ]
 }
