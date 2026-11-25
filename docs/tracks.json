@@ -74,11 +74,6 @@
       "no": "07", "title_jp": "傾かない天秤", "title_en": "THE UNTILTING SCALE",
       "jacket": "assets/jackets/07.jpg",
       "links": {"spotify": null, "apple_music": null, "youtube_music": null, "youtube_mv": null}
-    },
-    {
-      "no": "08", "title_jp": "", "title_en": "",
-      "jacket": null,
-      "links": {"spotify": null, "apple_music": null, "youtube_music": null, "youtube_mv": null}
     }
   ]
 }
